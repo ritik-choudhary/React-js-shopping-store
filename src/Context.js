@@ -6,7 +6,7 @@ const ProductContext = React.createContext()
 class ProductProvider extends Component {
   state = {
     products: [],
-    detailProduct: detailProduct,
+    detailProduct: [],
     cart: [],
     modalOpen: false,
     modalProduct: detailProduct,
@@ -87,6 +87,7 @@ class ProductProvider extends Component {
       }
     )
   }
+  
   decrement = (id) => {
     let tempCart = [...this.state.cart]
     const selectedProduct = tempCart.find((item) => item.id === id)
